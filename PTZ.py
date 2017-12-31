@@ -10,7 +10,7 @@ class PTZ:
         self.request = ptz.create_type('ContinuousMove')
         self.request.ProfileToken = profile.token #add token
     
-    def performMove(self):
+    def perform_move(self):
         sleep(1)
         self.request.Velocity = self.profile.PTZConfiguration.DefaultPTZSpeed
         self.ptz.ContinuousMove(self.request)
